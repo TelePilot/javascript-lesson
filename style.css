@@ -1,0 +1,101 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Questrial', sans-serif;
+	transition: 0.2s ease-in-out;
+}
+body.dark {
+	background-color: #292c35;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+.wrapper {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+/* Menu */
+#nav {
+	width: 600px;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 20px 0;
+	position: relative;
+}
+
+.link {
+	text-decoration: none;
+	color: black;
+	font-size: 22px;
+	transition: 0.2s ease-in-out;
+}
+.link.white {
+	color: white;
+}
+
+#marker {
+	position: absolute;
+	height: 4px;
+	width: 0;
+	background: purple;
+	bottom: -8px;
+	transition: 0.5s;
+	border-radius: 4px;
+}
+/* Dark Theme */
+.fa-moon {
+	color: #f1c40f;
+}
+.fa-sun {
+	color: #f39c12;
+}
+#checkbox {
+	opacity: 0;
+	position: absolute;
+}
+#checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+.label {
+	cursor: pointer;
+	background: #111;
+	display: flex;
+	border-radius: 50px;
+	height: 26px;
+	width: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+}
+
+.ball {
+	border-radius: 50%;
+	left: 2px;
+	top: 2px;
+	background: #fff;
+	position: absolute;
+	height: 22px;
+	width: 22px;
+	transition: 0.2s ease-in-out;
+}
+/* Boxes */
+#box-container {
+	width: 1000px;
+	height: 600px;
+	background: grey;
+	position: relative;
+	overflow: hidden;
+}
+
+.box {
+	height: 40px;
+	transition: 0.5s ease-in-out;
+	position: absolute;
+}
